@@ -18,7 +18,7 @@ export default function Index() {
             <div>
                 <h1>Hello World!</h1>
                 <Link to='/demo'>
-                    <p>hello world</p>
+                    <p>demo page</p>
                 </Link>
             </div>
         </>
