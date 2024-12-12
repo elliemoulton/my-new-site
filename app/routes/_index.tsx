@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const meta: MetaFunction = () => {
     return [
-        { title: 'Ellie Moulton: Freelance Frontend Developer' },
+        { title: 'Ellie Moulton | Frontend Developer' },
         {
             name: 'description',
             content:
@@ -17,8 +17,8 @@ export default function Index() {
         <>
             <div>
                 <h1>Hello World!</h1>
-                <Link to='/demo'>
-                    <p>demo page</p>
+                <Link to='/portfolio'>
+                    <p>portfolio</p>
                 </Link>
             </div>
         </>
