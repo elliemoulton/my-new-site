@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Products from '~/components/coffee/Products';
+import { products } from '~/components/coffee/Products';
 
 // imgs
 import Didi from 'src/imgs/didi.webp';
@@ -23,7 +23,36 @@ export default function ProcessCoffee() {
                         </Link>
                     </div>
                     <div className='sales-area'>
-                        <Products />
+                        <div className='recommended-products-homepage'>
+                            <div className='col1'>
+                                <h3>
+                                    Browse our full collection of specialty
+                                    coffees.
+                                </h3>
+                                <p>
+                                    We roast our coffee beans every week,
+                                    offering you a fresh selection of light and
+                                    medium roasts. Explore all of our available
+                                    products.
+                                </p>
+                                <Link to='/collections/all'>
+                                    <button>Shop Now</button>
+                                </Link>
+                            </div>
+                            <div className='recommended-products-grid'>
+                                {products.slice(0, 3).map((product) => (
+                                    <div key={product.id} className='recommended-product'>
+                                        <img
+                                            src={product.img}
+                                            loading='lazy'
+                                            alt={product.title}
+                                        />
+                                        <h4>{product.title}</h4>
+                                        <p>{product.price}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                     <div className='player-highlight text-img-homepage'>
                         <div className='text'>

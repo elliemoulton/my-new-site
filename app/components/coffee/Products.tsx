@@ -1,31 +1,21 @@
-import LightRoast from '../../../src/imgs/coffee-roast1.webp';
+import ProcessBlend from '../../../src/imgs/process-blend.webp';
+import RisingTide from '../../../src/imgs/rising-tide.webp';
+import Burundi from '../../../src/imgs/burundi.webp';
+import Sumatra from '../../../src/imgs/sumatra.webp';
 
-const products = [
-    { id: 0, title: `Light Roast`, price: `$16`, img: LightRoast },
-    { id: 1, title: `Medium Roast`, price: `$14`, img: LightRoast },
-    { id: 3, title: `Dark Roast`, price: `$12`, img: LightRoast },
+export const products = [
+    { id: 0, title: `Process Blend`, price: `$16`, img: ProcessBlend },
+    {
+        id: 1,
+        title: `Rising Tide: DiDi x Process`,
+        price: `$14`,
+        img: RisingTide,
+    },
+    { id: 3, title: `Burundi Kayanza Nemba`, price: `$12`, img: Burundi },
+    {
+        id: 4,
+        title: `Sumatra Ratu Ketiara Gayo`,
+        price: `$12`,
+        img: Sumatra,
+    },
 ];
-
-export default function Products() {
-    return (
-        <>
-            <div className='recommended-products'>
-                <div className='recommended-products-grid'>
-                    {products.map((product) => (
-                        <>
-                            <img
-                                src={product.img}
-                                loading='lazy'
-                                alt={product.title}
-                            />
-                            <h4>{product.title}</h4>
-                            <p>{product.price}</p>
-                        </>
-                    ))}
-                </div>
-
-                <br />
-            </div>
-        </>
-    );
-}
