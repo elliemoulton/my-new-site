@@ -1,14 +1,28 @@
 import { Link } from 'react-router-dom';
+import type { LinksFunction } from '@remix-run/node';
 
+// components
 import { products } from '~/components/coffee/Products';
+import BrewGuideCards from '~/components/coffee/BrewGuideCards';
+
+// styles
+import appStylesHref from '../process-coffee.css';
+export const links: LinksFunction = () => [
+    { rel: 'stylesheet', href: appStylesHref },
+];
 
 // imgs
 import Didi from 'src/imgs/didi.webp';
 import AboutUs from 'src/imgs/about-us.webp';
 
+
 export default function ProcessCoffee() {
     return (
         <>
+            <head>
+                <title>Portfolio | Process Coffee Roasters</title>
+                <meta name='description' content='My description' />
+            </head>
             <div>
                 <div className='home'>
                     <div className='video-header'>
@@ -41,7 +55,10 @@ export default function ProcessCoffee() {
                             </div>
                             <div className='recommended-products-grid'>
                                 {products.slice(0, 3).map((product) => (
-                                    <div key={product.id} className='recommended-product'>
+                                    <div
+                                        key={product.id}
+                                        className='recommended-product'
+                                    >
                                         <img
                                             src={product.img}
                                             loading='lazy'
@@ -74,7 +91,7 @@ export default function ProcessCoffee() {
                     </div>
                     <div className='brew-guides'>
                         <h2>Learn how to brew the perfect cup of coffee.</h2>
-                        {/* <BrewGuideCards /> */}
+                        <BrewGuideCards />
                     </div>
                     <div className='about-us text-img-homepage'>
                         <div className='text'>

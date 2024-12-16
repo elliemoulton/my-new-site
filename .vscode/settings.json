@@ -18,5 +18,9 @@
         "titleBar.inactiveBackground": "#20124599",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#201245"
+    "peacock.color": "#201245",
+    "cSpell.words": [
+        "Chemex",
+        "coldbrew"
+    ]
 }

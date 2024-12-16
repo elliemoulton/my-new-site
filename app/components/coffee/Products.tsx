@@ -8,14 +8,14 @@ export const products = [
     {
         id: 1,
         title: `Rising Tide: DiDi x Process`,
-        price: `$14`,
+        price: `$18`,
         img: RisingTide,
     },
-    { id: 3, title: `Burundi Kayanza Nemba`, price: `$12`, img: Burundi },
+    { id: 3, title: `Burundi Kayanza Nemba`, price: `$17`, img: Burundi },
     {
         id: 4,
         title: `Sumatra Ratu Ketiara Gayo`,
-        price: `$12`,
+        price: `$19`,
         img: Sumatra,
     },
 ];
